@@ -1,5 +1,7 @@
 package br.com.academy.Enums;
 
+import javax.validation.constraints.NotBlank;
+
 public enum Status {
 	
 	ATIVO("Ativo"),

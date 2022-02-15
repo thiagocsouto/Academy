@@ -1,5 +1,6 @@
 package br.com.academy.Enums;
 
+
 public enum Curso {
 	
 	ADMINISTRACAO("administração"),

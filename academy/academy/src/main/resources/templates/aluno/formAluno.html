@@ -23,7 +23,10 @@
     <!--Nome-->
     <form method="post" action="/InsertAlunos" th:object="${aluno}">
        <div class="row">
-         <div class="col-md-6 form-group offset-md-3">
+         <div class="col-md-6 form-group offset-md-3 " style="margin-top: 10px">
+             <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nome')}">
+            <label class="validation-message" th:errors="*{nome}"></label>
+         </div>
          <label ><b>Nome do Aluno:</b></label>
          <input class="form-control" placeholder="Ex: Catiele Santos" style="margin-top: 10px" th:field="*{nome}">      
         </div>
@@ -31,6 +34,9 @@
        <!--Curso-->
        <div class="row">
         <div class="col-md-6 form-group offset-md-3">
+			 	     <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('curso')}">
+                    <label class="validation-message" th:errors="*{curso}"></label>
+                    </div>
         <label style="margin-top: 10px"><b>Selecione o Curso:</b></label>
         <select class="form-control" style="margin-top: 10px" th:field="*{curso}">
              <option th:each="curso : ${T(br.com.academy.Enums.Curso).values()}"
@@ -40,7 +46,10 @@
       </div> 
         <!--Matricula-->
         <div class="row">
-            <div class="col-md-6 form-group offset-md-3">
+            <div class="col-md-6 form-group offset-md-3" style="margin-top: 20px">
+             <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('matricula')}">
+            <label class="validation-message" th:errors="*{matricula}"></label>
+         </div>
             <label style="margin-top: 10px"><b>Gerar Matricula:</b></label>
             <input class="form-control" id="matricula" style="margin-top: 10px" th:field="*{matricula}"> 
             <button type="button" onclick="GerarMatricula();" class="btn btn-primary offset-md-3" style="margin-top: 15px">GERAR</button>     
@@ -49,6 +58,9 @@
           <!--Status-->
 			 <div class="row">
 			 	<div class="col-md-6 form-group offset-md-3">
+			 	     <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('status')}">
+                    <label class="validation-message" th:errors="*{status}"></label>
+                    </div>
 					<label><b>Selecione o Status:</b></label> 
 					<select class="form-control" style="margin-top: 10px" th:field="*{status}">
 					<option
@@ -59,24 +71,30 @@
 			</div>
 		<!-- Turno -->
        <div class="row">
-         <div class="col-md-6 form-group offset-md-3" style="margin-top: 10px">
+         <div class="col-md-6 form-group offset-md-3" style="margin-top: 20px">
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('turno')}">
+            <label class="validation-message" th:errors="*{turno}"></label>
+         </div>
          <label><b>Turno:</b></label>
          <input class="form-control" placeholder="Ex: Manhã" style="margin-top: 10px" th:field="*{turno}">      
         </div>
-       </div>
+       </div> 
 			
 			<div class="row col-md-6 form-group offset-md-3">
 			  <button type="submit" class="btn btn-success" style="margin-top: 15px">SALVAR</button>
 			  &nbsp;&nbsp;&nbsp;&nbsp;
-			  <a class="btn btn-outline-danger" style="margin-top: -5px">VOLTAR</a>
+			  <a class="btn btn-outline-danger" style="margin-top: -5px" >VOLTAR</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
 			 
-		</form>  
+		</form>   
     </div>
     
     <script src="js/main.js"></script>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+<div th:replace="fragmentos/fragmentos :: rodape"></div>
 
 </body>
 </html>
