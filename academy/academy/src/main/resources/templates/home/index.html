@@ -36,6 +36,35 @@
         </div>
     </section>
     
+<!--     Inicio Modal -->
+    <div class="modal fade" id="modalPesquisa" tabindex="-1" aria-labelledby="modalPesquisaLabel" aria-hidden="true">
+         <div class="modal-dialog">
+              <div class="modal-content">
+                   <div class="modal-header"> 
+                   
+                       <h5 class="modal-title" >Encontre um Aluno</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true"></span>
+                       </button>               
+                   </div>  
+   
+                   <form method="post" action="pesquisar-aluno" th:object="${aluno}">
+                   
+                   <div class="modal-body"> 
+                        <input type="text" placeholder="Digite o nome do aluno" th:field="*{nome}" class="form-control"/>            
+                   </div>
+                       <div class="modal-footer">
+                          <button class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                          <button type="submit" class="btn btn-success">Pesquisar</button>                       
+                       </div>
+                   </form> 
+              </div>
+         </div>
+     </div>
+     
+     
+    
+    
     <div th:replace="fragmentos/fragmentos :: rodape"></div>
 
 </body>
