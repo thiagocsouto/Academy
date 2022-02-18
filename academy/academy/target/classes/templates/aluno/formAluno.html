@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>+ Inserir Alunos</title> 
+    <title>Academy - Alunos</title> 
     <link rel="stylesheet" href="/css/style.css"/>                     
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/3d496cdab6.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body> 
+<body>  
 <div th:replace="fragmentos/fragmentos :: cabecalho"></div>
 
     <div class="container" style="margin-top: 50px;">
@@ -21,7 +21,7 @@
     <hr>
     <br>
     <!--Nome-->
-    <form method="post" action="/InsertAlunos" th:object="${aluno}">
+    <form method="post" action="/insert-alunos" th:object="${aluno}">
        <div class="row">
          <div class="col-md-6 form-group offset-md-3 " style="margin-top: 10px">
              <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nome')}">
@@ -83,7 +83,7 @@
 			<div class="row col-md-6 form-group offset-md-3">
 			  <button type="submit" class="btn btn-success" style="margin-top: 15px">SALVAR</button>
 			  &nbsp;&nbsp;&nbsp;&nbsp;
-			  <a class="btn btn-danger" style="margin-top: -5px" >VOLTAR</a>
+			  <a th:href="@{index}" class="btn btn-danger" style="margin-top: -5px" >VOLTAR</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
 			 

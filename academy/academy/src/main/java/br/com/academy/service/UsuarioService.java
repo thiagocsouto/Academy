@@ -2,6 +2,7 @@ package br.com.academy.service;
 
 import java.security.NoSuchAlgorithmException;
 
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,20 +20,35 @@ public class UsuarioService {
 	
 	public void salvarUsuario(Usuario usuario) throws Exception{
 		
-//		try {
-//			
-//			if(usuarioRepository.findByEmail(usuario.getEmail()) != null) {
-//				throw new EmailExistsException("email já existe no cadastro: "+ usuario.getEmail());
-//			}
-//			
-//			usuario.setSenha(Util.md5(usuario.getSenha()));
-//			
-//		} catch (NoSuchAlgorithmException e) {
-//			
-//			throw new CriptoExistException("Erro na criptografia da senha");
-//		}
+		if(usuarioRepository.findByEmail(usuario.getEmail()) != null) {
+			throw new EmailExistsException("email já existe no cadastro: "+ usuario.getEmail());
+		}
+		
+		usuario.setSenha(usuario.getSenha());
 		
 		usuarioRepository.save(usuario);  
 	}
+	
+	
+	public Usuario loginUsuario(String login, String senha) throws ServiceExc{
+		
+		Usuario usuarioLogin = usuarioRepository.buscarLogin(login, senha);
+		return usuarioLogin;
+		
+	}
 
 }
+
+//Caso queira usar criptografia na senha:
+//try {
+//	
+//	if(usuarioRepository.findByEmail(usuario.getEmail()) != null) {
+//		throw new EmailExistsException("email já existe no cadastro: "+ usuario.getEmail());
+//	}
+//	
+//	usuario.setSenha(usuario.getSenha());
+//	
+//} catch (NoSuchAlgorithmException e) {
+//	
+//	throw new CriptoExistException("Erro na criptografia da senha");
+//}

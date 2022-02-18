@@ -21,7 +21,7 @@ import br.com.academy.repository.AlunoRepository;
 @Controller
 public class AlunoController {
 	
-	@Autowired
+	@Autowired 
 	private AlunoRepository alunorepositorio;
 	
 	@GetMapping("teste")
@@ -31,7 +31,7 @@ public class AlunoController {
 		return mv;
 	}
 	
-	@GetMapping("/inserirAlunos")
+	@GetMapping("/inserir-alunos")
 	public ModelAndView insertAlunos(Aluno aluno) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("aluno/formAluno");
@@ -40,7 +40,7 @@ public class AlunoController {
 		
 	}
 	
-	@PostMapping("InsertAlunos")
+	@PostMapping("insert-alunos")
 	public ModelAndView inserirAluno(@Valid Aluno aluno, BindingResult br) {
 		ModelAndView mv = new ModelAndView();
 		if(br.hasErrors()) {

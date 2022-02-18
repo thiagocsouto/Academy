@@ -1,9 +1,33 @@
 @charset "UTF-8";
 *{margin: 0;padding: 0; box-sizing: border-box;}
-nav{color: #fff; height: 90 px; text-transform: uppercase;}
+nav{ height: 90 px; text-transform: uppercase;}
 a{cursor: pointer; font-weight: bold;}  
 
 
+
+.navbar-collapse a{text-decoration: none; color: #ffffff;}
+.navbar-collapse a:hover{color:#A569BD;}
+
+.btn-danger{
+	border-radius: 5px;
+	font-weight: 400;
+	text-transform: uppercase;
+} 
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+footer {
+    margin-top: auto;
+}
 .neo-section{
     min-height: 700px;
     background-size: cover !important;

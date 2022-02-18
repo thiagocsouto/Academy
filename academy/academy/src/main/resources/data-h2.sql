@@ -6,6 +6,6 @@ INSERT INTO aluno(id, nome, curso, matricula, status, turno) VALUES
 ; 
 
 INSERT INTO usuario(id, email, login, senha) VALUES
-(1,'thiagocsouto@outlook.com','academy','123456')
+(1,'thiagocsouto@outlook.com','thiago','123456')
 ;  
  
