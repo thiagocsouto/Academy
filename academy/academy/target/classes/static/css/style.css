@@ -10,8 +10,6 @@ a{cursor: pointer; font-weight: bold;}
 
 .btn-danger{
 	border-radius: 5px;
-	font-weight: 400;
-	text-transform: uppercase;
 } 
 
 html {

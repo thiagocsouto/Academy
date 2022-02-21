@@ -30,7 +30,10 @@
             <a class="btn-nav nav-item nav-link"  th:href="@{inserir-alunos}"><i class="fas fa-user-graduate"></i> Cadastrar Aluno</a>
             <a data-bs-toggle="modal" data-bs-target="#modalPesquisa" class="btn-nav nav-item nav-link" ><i class="fas fa-search"></i> Pesquisar Aluno</a>
             <form action="/logout" method="post">
-            <button type="submit" class="btn-nav nav-item nav-link btn-danger m-3" style="color: #fff"> Sair</button> 
+            <div class="button-sair">
+              <button type="submit" class="btn-nav nav-item nav-link btn-danger m-3" style="color: #fff; text-transform: uppercase;"> Sair</button> 
+            </div> 
+           
             </form>
         
         </div>
