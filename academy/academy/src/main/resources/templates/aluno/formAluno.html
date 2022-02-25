@@ -21,7 +21,7 @@
     <hr>
     <br>
     <!--Nome-->
-    <form method="post" action="/insert-alunos" th:object="${aluno}">
+    <form method="post" action="/inserir-alunos" th:object="${aluno}">
        <div class="row">
          <div class="col-md-6 form-group offset-md-3 " style="margin-top: 10px">
              <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('nome')}">
