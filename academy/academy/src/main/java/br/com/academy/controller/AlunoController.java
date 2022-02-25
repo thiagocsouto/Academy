@@ -40,7 +40,7 @@ public class AlunoController {
 		
 	}
 	
-	@PostMapping("insert-alunos")
+	@PostMapping("inserir-alunos")
 	public ModelAndView inserirAluno(@Valid Aluno aluno, BindingResult br) {
 		ModelAndView mv = new ModelAndView();
 		if(br.hasErrors()) {
