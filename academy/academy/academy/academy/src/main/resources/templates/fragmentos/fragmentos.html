@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy</title> 
+    <link rel="stylesheet" href="/css/style.css"/>                     
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script> 
+    <script src="https://kit.fontawesome.com/3d496cdab6.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>  
+
+<!-- Cabecalho -->
+  <header th:fragment="cabecalho">    
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4527A0;">
+        <a class="navbar-brand" th:href="@{/index}">
+          <img src="/img/logo_header-site.png" alt="imagem do logo academy" width="200px"/>        
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+                <span class="navbar-toggler-icon"></span>
+        </button>  
+        
+        <div id="navMobile" class="navbar-collapse collapse justify-content-end"> 
+         
+            <a class="btn-nav nav-item nav-link"  th:href="@{index}"><i class="fas fa-home"></i>  Home</a>
+            <a class="btn-nav nav-item nav-link"  th:href="@{inserir-alunos}"><i class="fas fa-user-graduate"></i>  Cadastrar Aluno</a>
+            <a data-bs-toggle="modal" data-bs-target="#modalPesquisa" class="btn-nav nav-item nav-link" ><i class="fas fa-search"></i>  Pesquisar Aluno</a>
+            <form action="/logout" method="post">
+            <button type="submit" class="btn-nav nav-item nav-link btn-danger m-3" style="color: #fff; border-radius: 5px;font-weight: 400;text-transform: uppercase;"> Sair</button>  
+            </form>
+        
+        </div>
+        
+    </nav>
+    </header>
+    
+<!--footer-->
+    
+    <footer th:fragment="rodape">
+     <div class="rodape">
+         <span>Todos os Direitos Reservados - 2022 &copy; Thiago Souto</span>
+     </div>
+    </footer>
+    
+     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html> 
