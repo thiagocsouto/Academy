@@ -1,0 +1,29 @@
+<html th:replace="~{base/base :: layout (~{:: main})}">
+<!-- 	<div style="margin: 0; text-align: center" class="alert alert-success alert-dismissible fade show" -->
+<!-- 		role="alert"> -->
+<!-- 	    <strong>Seja Bem Vindo: </strong><span  th:text="${session.usuarioLogado.login}"></span> -->
+<!-- 		<button type="button" class="btn-close" data-bs-dismiss="alert" -->
+<!-- 			aria-label="Close"></button> -->
+<!-- 	</div> -->
+    <main>
+
+    <section class="neo-section" style="background-image: url(img/bg-index.jpg);">
+    <div class="sombra"></div>
+        <div class="center neo-container">
+         <h1 class="texto-centro">Academy</h1> 
+            <h1 class="texto-centro">Sistema de Gerenciamento de Alunos</h1> 
+        </div>
+
+        <div style="text-align: center">
+             <a th:href="@{/inserir-alunos}"><button class="btn btn-primary">CADASTRAR ALUNO</button></a>
+        </div>
+
+      
+    </section>
+    
+    
+
+</main>
+</html>
+  
+ 
