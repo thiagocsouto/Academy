@@ -37,7 +37,7 @@
          </div>
             <label style="margin-top: 10px"><b>Gerar MatrÍcula:</b></label>
             <input class="form-control" id="matricula" style="margin-top: 10px" th:field="*{matricula}"> 
-            <button type="button" onclick="GerarMatricula();" class="btn btn-primary offset-md-3" style="margin-top: 15px">GERAR</button>     
+            <button type="button" onclick="GerarMatricula();" class="btn btn-primary offset-md-4" style="margin-top: 15px; width: 25%">GERAR</button>     
            </div>
           </div>
           <!--Status-->
@@ -66,10 +66,9 @@
        </div> 
        
         <div class="row" style="margin-left: 30px">
-		  <div class="col-md-6 form-group offset-md-3" style="margin-top: 20px">
-		   <button type="submit" class="btn btn-success">SALVAR</button>
-			&nbsp; 
-		   <a th:href="@{/index}" class="btn btn-danger" >VOLTAR</a>
+		  <div class="col-md-5 form-group offset-md-4" style="margin-top: 20px">
+		   <button type="submit" class="btn btn-success">SALVAR</button> 
+		   <a th:href="@{/index}" class="btn btn-danger"  style="margin-top: 20px" >VOLTAR</a>
 		  </div> 
       </div>
 		
